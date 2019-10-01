@@ -17,7 +17,7 @@ const mongoURL = 'mongodb://localhost:27017/mernloginreg';
 
 mongoose
     .connect(mongoURL, {useNewUrlParser: true})
-    .then(() => console.log("MogoDB Connected"))
+    .then(() => console.log("MongoDB Connected"))
     .catch(err => console.log(err));
 
 let Users = require('./routes/Users');

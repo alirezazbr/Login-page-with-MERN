@@ -56,6 +56,7 @@ users.post('/login', (req, res) => {
                         last_name: user.last_name,
                         email: user.email
                     };
+                    console.log(user.first_name);
                     let token = jwt.sign(payload, process.env.SECRET_KEY, {
                         expiresIn: 1440
                     });

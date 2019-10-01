@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
-export default class Navbar extends React.Component {
+class Navbar extends React.Component {
     logOut(e) {
         e.preventDefault();
         localStorage.removeItem('usertoken');
@@ -33,7 +33,7 @@ export default class Navbar extends React.Component {
                 </li>
                 <li className='nav-item'>
                     <a href='' onClick={this.logOut.bind(this)} className='nav-link'>
-                        Register
+                        Logout
                     </a>
                 </li>
             </ul>
@@ -67,3 +67,5 @@ export default class Navbar extends React.Component {
         )
     }
 }
+
+export default withRouter(Navbar)
